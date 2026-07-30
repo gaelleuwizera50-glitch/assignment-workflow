@@ -1,0 +1,23 @@
+#  name of the workflow(appears in the actions tab)
+name: Hello Uwizera Gaelle
+
+# events that trigger this workflow
+on: 
+  # triggers on push to a branch
+  push:
+    branches: [main]
+
+  # allows manual triggering form the actions tab
+  workflow_dispatch:
+
+# jobs to run
+jobs:
+  # job ID or name
+  greet:
+    # the type of runner to use
+    runs-on: ubuntu-latest
+
+    # steps to execute in this job
+    steps:
+      - name: say hello
+        run: echo "Hello Uwizera Gaelle"
